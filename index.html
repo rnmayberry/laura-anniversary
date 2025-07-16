@@ -1,0 +1,96 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy Anniversary, Laura</title>
+  <style>
+    body {
+      background-color: #ffe6f0;
+      font-family: 'Georgia', serif;
+      color: #4b2e2e;
+      margin: 0;
+      padding: 0;
+      background-image: url('https://www.transparenttextures.com/patterns/hearts.png');
+      background-repeat: repeat;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 2rem;
+      background-color: rgba(255, 255, 255, 0.9);
+      border-radius: 20px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+      margin-top: 4rem;
+    }
+    h1 {
+      font-family: 'Brush Script MT', cursive;
+      font-size: 2.5rem;
+      text-align: center;
+      color: #d63384;
+    }
+    p {
+      line-height: 1.7;
+      font-size: 1.1rem;
+    }
+    .timer {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #fff0f5;
+      border: 2px solid #ff99cc;
+      border-radius: 10px;
+      padding: 1rem;
+      font-size: 1rem;
+      color: #c2185b;
+      box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Dear Laura,</h1>
+    <p>
+      Happy Anniversary, baby. I want to start off and say there are times when I look at you and I simply find I cannot breathe — mostly because of your beauty, but it’s also because of what you do to me.<br><br>
+      Your presence quiets my mind. You have been my rock, my anchor. You’ve kept me from drifting off course. You support me in everything I do, and I’m so thankful for you. Your strength and your grace are something every man dreams of.<br><br>
+      You have shown me what it means not only to love, but also to be loved. I can safely say I am the luckiest man alive, and it’s all thanks to you.<br><br>
+      Even with the things you have been through, you still choose to be gentle, kind, and soft. Your love seems to know no ends. You have helped me realize and heal things within myself I never knew were there before.<br><br>
+      As for your beauty, baby — it’s deeper than that of your outward appearance. Although you’ve got looks that could kill, I love who you are. You light up rooms when you walk in. Laura, you are living proof of the beauty of God’s creations. You are certainly one of His most divine creations. You are a gift from the heavens, a miracle — and somehow, I get to call you mine.<br><br>
+      Loving you has always been something that has come easy. Since you said yes 11 months ago, loving you has come natural — like breathing. It has never been something I had to put thought toward.<br><br>
+      After you said yes, everything finally made sense. All the dots connected. My missing rib had finally returned to me. I realized that day I would find you in every lifetime.<br><br>
+      Finding you and your love means that even if I do nothing else in this life, I could die a happy man. Every day, I have fallen more and more in love with you — and found more reasons to love you.<br><br>
+      Thank you for being you, Laura. Thank you for the best 11 months of my life, and here’s to many, many more to come.<br><br>
+      With all my love,<br>
+      Reid.
+    </p>
+  </div>
+  <div class="timer" id="timer">Loading timer...</div>
+
+  <script>
+    const startDate = new Date("August 15, 2024 00:00:00");
+    const timerEl = document.getElementById("timer");
+
+    function updateTimer() {
+      const now = new Date();
+      let diff = Math.floor((now - startDate) / 1000);
+
+      const years = Math.floor(diff / (365 * 24 * 60 * 60));
+      diff %= 365 * 24 * 60 * 60;
+      const months = Math.floor(diff / (30 * 24 * 60 * 60));
+      diff %= 30 * 24 * 60 * 60;
+      const days = Math.floor(diff / (24 * 60 * 60));
+      diff %= 24 * 60 * 60;
+      const hours = Math.floor(diff / 3600);
+      diff %= 3600;
+      const minutes = Math.floor(diff / 60);
+      const seconds = diff % 60;
+
+      timerEl.textContent = `Together for: ${years} years, ${months} months, ${days} days, ${hours} hrs, ${minutes} min, ${seconds} sec`;
+    }
+
+    setInterval(updateTimer, 1000);
+    updateTimer();
+  </script>
+</body>
+</html>
